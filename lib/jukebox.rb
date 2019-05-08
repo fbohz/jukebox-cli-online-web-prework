@@ -32,15 +32,17 @@ def play(songs)
   songs.each_with_index do |song, index|
       if song.include?(pick) 
       a_response = "Playing #{song}"
+      break 
       elsif songs[pick.to_i] == song
       a_response = "Playing #{song}"
+      break 
       else
       a_response = "Invalid input, please try again"
 
     end
-    puts a_response
   end 
-  
+  puts a_response
+
 end  
 
 def list(songs)
